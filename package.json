@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest",
     "run:fm": "ts-node ./src/workshop/free-monads/run.ts",
-    "run:tf": "ts-node ./src/workshop/tagless-final/run.ts"
+    "run:tf": "ts-node ./src/workshop/tagless-final/run.ts",
+    "run:redux": "ts-node ./src/workshop/redux/run.ts"
   },
   "keywords": [
     "edsl",
@@ -29,7 +30,8 @@
   },
   "dependencies": {
     "fp-ts": "^2.5.3",
-    "fp-ts-contrib": "^0.1.15"
+    "fp-ts-contrib": "^0.1.15",
+    "redux": "4.0.5"
   },
   "jest": {
     "testEnvironment": "jsdom",
