@@ -18,7 +18,7 @@ export const exampleProgram1: Middleware<{}, ProgramState> = ({ getState, dispat
             case ExampleActionType.ONE: {
                 isRunning = true
                 const { userId } = action.payload
-                const cachedPosts = API.cacheGetPosts(getState)(action.payload.userId)
+                const cachedPosts = API.cacheGetPosts(getState(), action.payload.userId)
                 if (!cachedPosts) {
                     dispatch(API.dbGetPosts(userId))
                     break

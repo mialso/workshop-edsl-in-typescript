@@ -33,7 +33,7 @@ export type ProgramActionType = ExampleActionType | KVStoreActionType | Database
 
 // selector
 type ProgramState = {cache: Map<string, string>}
-export const cacheGetPosts = (getState: () => ProgramState) => (userId: number) => getState().cache.get(`${userId}`)
+export const cacheGetPosts = (state: ProgramState, userId: number) => state.cache.get(`${userId}`)
 // normal actions
 export const cacheStorePosts = (userId: number, posts: Post[]) => <const>{type: KVStoreActionType.PUT, payload: { userId, posts }}
 export const cacheInvalidate = (userId: number) => <const>{type: KVStoreActionType.DELETE, payload: { userId }}
